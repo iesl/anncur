@@ -51,8 +51,8 @@ All methods are evaluated on the task of finding top-k nearest neighbors items f
 using `eval/run_retrieval_eval_wrt_exact_crossenc.py` and `eval/run_retrieval_eval_wrt_exact_crossenc_w_fixed_train_test_splits.py`.
 
 
-## Download pre-trained dual-encoder and cross-encoder models used in the paper
+## Download pre-trained dual-encoder and cross-encoder models used in the paper from huggingface
 
-* Dual-Encoder Model
-* Cross-Encoder Model w/ [CLS] token pooling
-* Cross-Encoder Model w/ proposed special token based pooling (see paper for details)
+* [Dual-Encoder Model](https://huggingface.co/nishantyadav/dual_encoder_zeshel)
+* [Cross-Encoder Model w/ [CLS] token pooling](https://huggingface.co/nishantyadav/cls_crossencoder_zeshel)
+* [Cross-Encoder Model w/ proposed special token based pooling (see paper for details)](https://huggingface.co/nishantyadav/emb_crossenc_zeshel)
