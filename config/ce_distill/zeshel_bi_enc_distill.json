@@ -1,0 +1,47 @@
+{
+  "exp_id": "8_CUR_EMNLP",
+  "misc": "",
+  "mode": "train",
+  "debug_w_small_data": 0,
+
+  "data_type" : "ent_link_ce",
+  "data_dir" : "",
+
+  "train_domains":["yugioh"],
+  "dev_domains":["yugioh"],
+
+  "mention_file_template" : "../../data/zeshel/processed/all_worlds/{}_mentions.jsonl",
+  "entity_file_template" : "../../data/zeshel/documents/{}.json",
+  "entity_token_file_template" : "../../data/zeshel/tokenized_entities/{}_128_bert_base_uncased.npy",
+
+
+  "train_ent_w_score_file_template" : "../../results/8_CUR_EMNLP/d=ent_link_ce/6_256_e_crossenc/score_mats_model-2-15999.0--79.46.ckpt/{}/m2e_splits/nm_train=100/split_idx=0/train_train.pkl",
+  "dev_ent_w_score_file_template"   : "../../results/8_CUR_EMNLP/d=ent_link_ce/6_256_e_crossenc/score_mats_model-2-15999.0--79.46.ckpt/{}/m2e_splits/nm_train=100/split_idx=0/train_dev.pkl",
+
+  "neg_strategy": "top_ce_match",
+  "distill_n_labels": 4,
+  "num_negs": 8,
+
+
+  "model_type": "bi_enc",
+
+  "bert_model": "bert-base-uncased",
+  "max_input_len": 128,
+  "max_label_len": 128,
+
+
+  "type_optimization": "all_encoder_layers",
+
+  "pooling_type": "cls",
+  "loss_type": "ce",
+
+  "train_batch_size": 128,
+  "grad_acc_steps": 4,
+  "eval_batch_size": 32,
+  "eval_interval": 0.5,
+
+  "warmup_proportion": 0.00
+
+}
+
+

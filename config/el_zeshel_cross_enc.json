@@ -1,0 +1,93 @@
+{
+  "exp_id": "4_Zeshel",
+  "misc": "hard_negs",
+  "mode": "train",
+
+  "data_type" : "ent_link",
+  "data_dir" : "",
+  "trn_files" : {
+    "military": [
+      "../../data/zeshel/processed/train_worlds/military_mentions.jsonl",
+      "../../data/zeshel/documents/military.json",
+      "../../data/zeshel/tokenized_entities/military_128_bert_base_uncased.npy"
+    ],
+    "starwars": [
+      "../../data/zeshel/processed/train_worlds/starwars_mentions.jsonl",
+      "../../data/zeshel/documents/starwars.json",
+      "../../data/zeshel/tokenized_entities/starwars_128_bert_base_uncased.npy"
+    ],
+    "world_of_warcraft": [
+      "../../data/zeshel/processed/train_worlds/world_of_warcraft_mentions.jsonl",
+      "../../data/zeshel/documents/world_of_warcraft.json",
+      "../../data/zeshel/tokenized_entities/world_of_warcraft_128_bert_base_uncased.npy"
+    ],
+    "american_football": [
+      "../../data/zeshel/processed/train_worlds/american_football_mentions.jsonl",
+      "../../data/zeshel/documents/american_football.json",
+      "../../data/zeshel/tokenized_entities/american_football_128_bert_base_uncased.npy"
+    ],
+    "doctor_who": [
+      "../../data/zeshel/processed/train_worlds/doctor_who_mentions.jsonl",
+      "../../data/zeshel/documents/doctor_who.json",
+      "../../data/zeshel/tokenized_entities/doctor_who_128_bert_base_uncased.npy"
+    ],
+    "fallout": [
+      "../../data/zeshel/processed/train_worlds/fallout_mentions.jsonl",
+      "../../data/zeshel/documents/fallout.json",
+      "../../data/zeshel/tokenized_entities/fallout_128_bert_base_uncased.npy"
+    ],
+    "final_fantasy": [
+      "../../data/zeshel/processed/train_worlds/final_fantasy_mentions.jsonl",
+      "../../data/zeshel/documents/final_fantasy.json",
+      "../../data/zeshel/tokenized_entities/final_fantasy_128_bert_base_uncased.npy"
+    ],
+    "pro_wrestling": [
+      "../../data/zeshel/processed/train_worlds/pro_wrestling_mentions.jsonl",
+      "../../data/zeshel/documents/pro_wrestling.json",
+      "../../data/zeshel/tokenized_entities/pro_wrestling_128_bert_base_uncased.npy"
+    ]
+  },
+  "dev_files" : {
+    "elder_scrolls": [
+      "../../data/zeshel/processed/valid_worlds/elder_scrolls_mentions.jsonl",
+      "../../data/zeshel/documents/elder_scrolls.json",
+      "../../data/zeshel/tokenized_entities/elder_scrolls_128_bert_base_uncased.npy"
+    ],
+    "ice_hockey": [
+      "../../data/zeshel/processed/valid_worlds/ice_hockey_mentions.jsonl",
+      "../../data/zeshel/documents/ice_hockey.json",
+      "../../data/zeshel/tokenized_entities/ice_hockey_128_bert_base_uncased.npy"
+    ],
+    "coronation_street": [
+      "../../data/zeshel/processed/valid_worlds/coronation_street_mentions.jsonl",
+      "../../data/zeshel/documents/coronation_street.json",
+      "../../data/zeshel/tokenized_entities/coronation_street_128_bert_base_uncased.npy"
+    ],
+    "muppets": [
+      "../../data/zeshel/processed/valid_worlds/muppets_mentions.jsonl",
+      "../../data/zeshel/documents/muppets.json",
+      "../../data/zeshel/tokenized_entities/muppets_128_bert_base_uncased.npy"
+    ]
+  },
+
+
+  "neg_strategy": "hard_negs",
+  "neg_mine_bienc_model_file": "",
+
+  "model_type": "cross_enc",
+
+  "bert_model": "bert-base-uncased",
+  "max_input_len": 128,
+  "max_label_len": 128,
+
+
+  "type_optimization": "all_encoder_layers",
+
+  "pooling_type": "cls_w_lin",
+  "loss_type": "ce",
+
+  "train_batch_size": 32,
+  "grad_acc_steps": 4,
+  "eval_interval": 1000
+
+}
